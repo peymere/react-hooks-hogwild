@@ -6,10 +6,10 @@ import PigCard from "./PigCard";
 function CardContainer({hogData}){
     return(
         <div>
-            Hello from CardContainer
-            <ul className="ui grid container">
+            <ul className="ui grid container normalText">
                 {hogData.map((hog) => (
-                    <PigCard key={hog.name} name={hog.name} image={hog.image} />
+
+                    <PigCard key={hog.name} name={hog.name} image={hog.image} specialty={hog.specialty} weight={hog.weight} greased={hog.greased} medalAchieved={hog.highestMedalAchieved}/>
                 ))}
                 
             </ul>
@@ -19,3 +19,6 @@ function CardContainer({hogData}){
 
 
 export default CardContainer
+
+
+// When the user clicks on the hog tile, display the other details about the hog (its specialty, weight, greased, and highest medal achieved) DONE
